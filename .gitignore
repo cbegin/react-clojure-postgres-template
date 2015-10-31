@@ -1,0 +1,17 @@
+/target
+/classes
+/checkouts
+pom.xml
+pom.xml.asc
+*.jar
+*.class
+/.lein-*
+/.nrepl-port
+.hgignore
+.hg/
+.idea
+/resources/public/app/node_modules
+/resources/public/app/js/bundle.js
+*.iml
+.DS_Store
+npm-debug.log

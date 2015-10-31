@@ -1,4 +1,4 @@
-(ns api.service
+(ns api.routes
   (:require [clojure.pprint :refer [pprint]]
             [ring.middleware.nested-params :refer :all]
             [ring.middleware.keyword-params :refer :all]
@@ -27,7 +27,7 @@
         (status 200))))
 
 (defn app-routes []
-  (routes 
+  (routes
     (context "/v1" {body :body :as request}
       (-> (context "/template" {body :body :as request}
             (GET "/echo/:message" [message] (logic/echo message)))

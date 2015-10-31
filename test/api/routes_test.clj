@@ -1,7 +1,7 @@
-(ns api.service-test
+(ns api.routes-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :refer :all]
-            [api.service :refer :all]
+            [api.routes :refer :all]
             [cheshire.core :refer :all]
             ))
 

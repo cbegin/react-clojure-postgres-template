@@ -1,4 +1,4 @@
-(ns api.routes-test
+(ns api.service-test
   (:require [clojure.test :refer :all]
             [ring.mock.request :refer :all]
             [api.service :refer :all]

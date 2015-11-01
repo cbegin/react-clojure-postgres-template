@@ -22,11 +22,10 @@ var history = History.useBasename(History.createHistory)({
 });
 
 ReactDOM.render((
-    <Echo/>
-    //<Router history={history}>
-    //    <Route path="/" component={App}>
-    //        <IndexRoute component={Echo}/>
-    //        <Route path="*" component={NotFound}/>
-    //    </Route>
-    //</Router>
+    <Router history={history}>
+        <Route path="/" component={App}>
+            <IndexRoute component={Echo}/>
+            <Route path="*" component={NotFound}/>
+        </Route>
+    </Router>
 ), document.getElementById('react-target'));

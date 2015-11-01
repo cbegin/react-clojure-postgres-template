@@ -1,17 +1,25 @@
+# binaries
+*.jar
+*.class
+
+# lein/maven stuff
+/.lein-*
+/.nrepl-port
 /target
 /classes
 /checkouts
 pom.xml
 pom.xml.asc
-*.jar
-*.class
-/.lein-*
-/.nrepl-port
-.hgignore
-.hg/
-.idea
+
+# node stuff
+npm-debug.log
 /resources/public/app/node_modules
 /resources/public/app/js/bundle.js
+
+# ide stuff
+.idea
 *.iml
+
+# mac stuff
 .DS_Store
-npm-debug.log
+

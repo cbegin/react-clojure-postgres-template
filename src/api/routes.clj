@@ -9,7 +9,7 @@
             [compojure.route :as route]
             [compojure.response :as response]
             [ring.util.response :as ring]
-            [api.logic :as logic])
+            [api.service :as logic])
   (:gen-class))
 
 (defn wrap-transaction [handler]

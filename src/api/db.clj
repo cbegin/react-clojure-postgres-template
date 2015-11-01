@@ -5,9 +5,6 @@
 
 (def ^:dynamic *db*)
 
-;;
-;; Echo
-;;
 (defn select-all-echos []
   (sql/query *db* ["select message from echo"]))
 

@@ -8,10 +8,9 @@ var Link = ReactRouter.Link;
 var Panel = ReactBootstrap.Panel;
 var Input = ReactBootstrap.Input;
 var Button = ReactBootstrap.Button;
-var ButtonToolbar = ReactBootstrap.ButtonToolbar
+var ButtonToolbar = ReactBootstrap.ButtonToolbar;
 
 var EchoStore = require('../store/EchoStore');
-
 
 module.exports = React.createClass({
     mixins: [
@@ -21,7 +20,7 @@ module.exports = React.createClass({
     getInitialState: function () {
         return {
             message: "",
-            userStatus: {
+            echoStatus: {
                 message: ""
             }
         }
@@ -30,7 +29,7 @@ module.exports = React.createClass({
     onEchoClick: function (e) {
         e.stopPropagation();
         e.preventDefault();
-        UserStore.actions.echo(this.state.message);
+        EchoStore.actions.echo(this.state.message);
     },
 
     onMessageChange: function (e) {
@@ -38,15 +37,20 @@ module.exports = React.createClass({
     },
 
     render: function () {
-        console.log(this.state);
         return (
             <div className="container">
                 <Panel className="bs-component" header={<h2>Echo</h2>}>
                     <form className='form-vertical' role="form">
                         <div className="form-group">
-                            <Input type='text' label="Message" value={this.state.message}
+                            <label>Message</label>
+                            <input type='text'
+                                   className="form-control"
+                                   value={this.state.message}
                                    onChange={this.onMessageChange}/>
-                            <Input type='text' label="Echo" value={this.state.echoStatus.message}
+                            <label>Echo</label>
+                            <input type='text'
+                                   className="form-control"
+                                   value={this.state.echoStatus.message}
                                    disabled/>
                         </div>
                         <div className="form-group">

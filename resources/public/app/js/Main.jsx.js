@@ -25,8 +25,6 @@ ReactDOM.render((
     <Router history={history}>
         <Route path="/" component={App}>
             <IndexRoute component={Echo}/>
-            <Route path="/echo" component={Echo}/>
-            <Route path="/project" component={ProjectDetails}/>
             <Route path="*" component={NotFound}/>
         </Route>
     </Router>

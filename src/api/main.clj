@@ -1,6 +1,6 @@
 (ns api.main
   (:require [ring.adapter.jetty :as jetty]
-            [api.service :refer [app]])
+            [api.routes :refer [app]])
   (:gen-class))
 
 (defn -main [& args]

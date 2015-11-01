@@ -14,7 +14,7 @@ module.exports = Reflux.createStore({
     onEcho: function (message) {
         var self = this;
         request
-            .get('/api/user/echo/' + message)
+            .get('/v1/template/echo/' + message)
             .end(function (err, res) {
                 self.trigger(res.body);
             });

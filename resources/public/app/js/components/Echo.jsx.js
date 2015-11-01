@@ -10,13 +10,13 @@ var Input = ReactBootstrap.Input;
 var Button = ReactBootstrap.Button;
 var ButtonToolbar = ReactBootstrap.ButtonToolbar
 
-var UserStore = require('../store/UserStore');
+var EchoStore = require('../store/EchoStore');
 
 
 module.exports = React.createClass({
     mixins: [
         ReactRouter.History,
-        Reflux.connect(UserStore, "userStatus")],
+        Reflux.connect(EchoStore, "echoStatus")],
 
     getInitialState: function () {
         return {
@@ -46,7 +46,7 @@ module.exports = React.createClass({
                         <div className="form-group">
                             <Input type='text' label="Message" value={this.state.message}
                                    onChange={this.onMessageChange}/>
-                            <Input type='text' label="Echo" value={this.state.userStatus.message}
+                            <Input type='text' label="Echo" value={this.state.echoStatus.message}
                                    disabled/>
                         </div>
                         <div className="form-group">

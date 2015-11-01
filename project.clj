@@ -10,7 +10,7 @@
                  [compojure "1.4.0"]
                  [cheshire "5.5.0"]]
 
-  :ring {:handler api.service/app
+  :ring {:handler api.routes/app
          :port 8080}
 
   :main api.main

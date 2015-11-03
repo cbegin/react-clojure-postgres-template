@@ -38,9 +38,8 @@
     "jsdom": "6.5.1"
   },
   "scripts": {
-    "watch": "./node_modules/.bin/watchify -v -o js/bundle.js .",
-    "browserify": "./node_modules/.bin/browserify . > js/bundle.min.js",
-    "build": "./node_modules/.bin/browserify . | ./node_modules/.bin/uglifyjs -cm > js/bundle.min.js",
+    "watch": "./node_modules/.bin/watchify -v -o ../resources/public/app/js/bundle.js .",
+    "build": "./node_modules/.bin/browserify . | ./node_modules/.bin/uglifyjs -cm > ../resources/public/app/js/bundle.js",
     "test": "./node_modules/.bin/mocha --recursive --watch",
     "test-once": "./node_modules/.bin/mocha --recursive"
   },

@@ -13,7 +13,7 @@ pom.xml.asc
 
 # node stuff
 npm-debug.log
-/resources/public/app/node_modules
+/web/node_modules
 /resources/public/app/js/bundle.js
 
 # ide stuff

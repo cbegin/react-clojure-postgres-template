@@ -27,7 +27,7 @@ ReactDOM.render((
             <Route path="/" component={NavBar}>
                 <IndexRoute component={Echo}/>
             </Route>
-            <Route path="boo" component={Echo}/>
+            <Route path="no-nav" component={Echo}/>
         </Route>
         <Route path="*" component={NotFound}/>
     </Router>

@@ -46,11 +46,6 @@ module.exports = React.createClass({
                                         Logout
                                     </Link>
                                 </li>
-                                <li>
-                                    <Link to="echo">
-                                        Echo
-                                    </Link>
-                                </li>
                             </ul>
                         </div>
                     </div>

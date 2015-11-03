@@ -23,9 +23,12 @@ var history = History.useBasename(History.createHistory)({
 
 ReactDOM.render((
     <Router history={history}>
-        <Route path="/" component={App}>
-            <IndexRoute component={Echo}/>
-            <Route path="*" component={NotFound}/>
+        <Route path="" component={App}>
+            <Route path="/" component={NavBar}>
+                <IndexRoute component={Echo}/>
+            </Route>
+            <Route path="boo" component={Echo}/>
         </Route>
+        <Route path="*" component={NotFound}/>
     </Router>
 ), document.getElementById('react-target'));

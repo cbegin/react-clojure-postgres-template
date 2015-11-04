@@ -24,9 +24,19 @@ embedded within it.
 * Leiningen 2.5.2+
 * Node 0.12.7+
 * Postgres 9.3+
-* MyBatis Migrations
+* MyBatis Migrations 
+    - https://github.com/mybatis/migrations/releases/tag/mybatis-migrations-3.2.0
 
 ## Usage
+
+### Create the database
+
+```
+cd {clone_dir}/database
+psql -U {dba_username} -f create_database.sql
+migrate up
+
+```
 
 ### Run in development mode:
 

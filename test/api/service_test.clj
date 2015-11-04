@@ -11,6 +11,5 @@
 (deftest test-logic
   (testing "echo function"
     (let [value (get-in (echo "foo") [:body :message])]
-      (println value)
       (is (= value "foo")))))
 

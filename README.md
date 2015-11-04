@@ -5,8 +5,8 @@ development of a web application or web service based on React, Clojure
 and Postgres.
 
 The resulting deployable artifact is a standalone executable JAR file which
-contains the complete web application, including all web resources embedded
-within it.
+contains the complete single-page web application, including all web resources 
+embedded within it.
 
 ## Features
 
@@ -14,7 +14,9 @@ within it.
   * React-Router
   * React-Bootstrap
 * Clojure 1.7.0
-
+  * Ring
+  * Compojure
+  * Cheshire
 
 ## Prerequisites
 
@@ -49,7 +51,3 @@ lein ring uberjar
 java -jar target/{jarfile}.jar
 ```
 
-
-## License
-
-TODO

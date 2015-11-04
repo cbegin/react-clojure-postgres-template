@@ -8,6 +8,14 @@ The resulting deployable artifact is a standalone executable JAR file which
 contains the complete web application, including all web resources embedded
 within it.
 
+## Features
+
+* React 0.14.0
+  * React-Router
+  * React-Bootstrap
+* Clojure 1.7.0
+
+
 ## Prerequisites
 
 * Java 1.8+

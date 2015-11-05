@@ -13,14 +13,14 @@
             [jdbc.pool.c3p0 :as pool])
   (:gen-class))
 
-(def dbspec (pool/make-datasource-spec {:classname "org.postgresql.Driver"
-                                        :subprotocol "postgresql"
-                                        :user "echo"
-                                        :password "echo"
-                                        :subname     "//localhost:5432/echo"
-                                        :min-pool-size 3
+(def dbspec (pool/make-datasource-spec {:classname         "org.postgresql.Driver"
+                                        :subprotocol       "postgresql"
+                                        :subname           "//localhost:5432/echo"
+                                        :user              "echo"
+                                        :password          "echo"
+                                        :min-pool-size     3
                                         :initial-pool-size 3
-                                        :max-pool-size 6}))
+                                        :max-pool-size     6}))
 
 (defn wrap-transaction [handler]
   (fn [req]

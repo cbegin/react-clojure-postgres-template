@@ -3,6 +3,7 @@
   :url "http://example.com/FIXME"
   :dependencies [[org.clojure/clojure "1.7.0"]
                  [org.clojure/java.jdbc "0.4.2"]
+                 [clojure.jdbc/clojure.jdbc-c3p0 "0.3.2"]
                  [postgresql "9.3-1102.jdbc41"]
                  [ring/ring-core "1.4.0"]
                  [ring/ring-jetty-adapter "1.4.0"]

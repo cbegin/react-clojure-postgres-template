@@ -9,12 +9,19 @@
             [compojure.route :as route]
             [compojure.response :as response]
             [ring.util.response :as ring]
-            [api.service :as logic])
+            [api.service :as logic]
+            [jdbc.pool.c3p0 :as pool])
   (:gen-class))
+
+(def dbspec (pool/make-datasource-spec {:classname "org.postgresql.Driver"
+                                        :subprotocol "postgresql"
+                                        :user "echo"
+                                        :password "echo"
+                                        :subname     "//localhost:5432/echo"}))
 
 (defn wrap-transaction [handler]
   (fn [req]
-    (binding [api.db/*db* "postgresql://echo:echo@localhost:5432/echo"]
+    (binding [api.db/*db* dbspec]
       (handler req))))
 
 (defn wrap-utf8 [handler]

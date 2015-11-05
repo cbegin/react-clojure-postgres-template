@@ -17,7 +17,10 @@
                                         :subprotocol "postgresql"
                                         :user "echo"
                                         :password "echo"
-                                        :subname     "//localhost:5432/echo"}))
+                                        :subname     "//localhost:5432/echo"
+                                        :min-pool-size 3
+                                        :initial-pool-size 3
+                                        :max-pool-size 6}))
 
 (defn wrap-transaction [handler]
   (fn [req]

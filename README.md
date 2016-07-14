@@ -10,10 +10,10 @@ embedded within it.
 
 ## Features
 
-* React 0.14.0
+* React 15.2.x
   * React-Router
   * React-Bootstrap
-* Clojure 1.7.0
+* Clojure 1.8.x
   * Ring
   * Compojure
   * Cheshire
@@ -21,8 +21,8 @@ embedded within it.
 ## Prerequisites
 
 * Java 1.8+
-* Leiningen 2.5.2+
-* Node 0.12.7+
+* Leiningen 2.6.1+
+* Node 4.4.6+
 * Postgres 9.3+
 * MyBatis Migrations 
     - https://github.com/mybatis/migrations/releases/tag/mybatis-migrations-3.2.0
@@ -60,4 +60,3 @@ lein ring uberjar
 
 java -jar target/{jarfile}.jar
 ```
-

@@ -1,13 +1,9 @@
 // Web Browser Mocks
-global.document = require('jsdom').jsdom('<!doctype html><html><body></body></html>');
-global.window = document.parentWindow;
+var jsdom = require('jsdom')
+global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
+global.window = document.defaultView
 global.navigator = window.navigator;
 global.DOMParser = require('xmldom').DOMParser;
-
-// React Tools
-global.React = require('react/addons');
-global.ReactTools = require('react-tools');
-global.TestUtils = React.addons.TestUtils;
 
 // Unit Testing Tools
 global.sinon = require('sinon');
